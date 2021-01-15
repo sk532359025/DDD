@@ -1,12 +1,14 @@
 #### 目录介绍
-    application 应用层 该层用作域和界面层之间的通道。将请求从接口层发送到域层，由域层处理请求并返回响应
-     
+    application  应用层 该层用作域和界面层之间的通道。将请求从接口层发送到域层，由域层处理请求并返回响应
+        controller 输入适配器 配合 gin handle 并响应
+        repository 输出适配器
+        
     domain 领域层
         aggregates 聚合
 		entity 实体
-		po 与数据库交互
-		valueobj 值对象
-		vo  View Object
+		po 与数据库交互 持久化对象  
+		vo  值对象
+		*.go 领域服务
 	
 	infra Infrastructure基础设施层
 	    config 项目相关配置
@@ -18,5 +20,7 @@
 	    
 	server 
 	    main.go 项目运行脚本
+	    conf 配置文件
+	    router 路由文件
 	    
 	
